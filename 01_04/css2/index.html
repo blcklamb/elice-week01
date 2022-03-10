@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .flexBox {
+            display: flex;
+            justify-content:space-evenly ;
+        }
+        .gridBox {
+            display: grid;
+            grid-template-columns: 80px 2fr 3fr 1fr;
+        }
+        .button button{
+            display: flex;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            background:plum;
+            box-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
+            padding: 5px;
+            cursor: pointer;
+            transition:  0.5s;
+        }
+        .button button:hover {
+            box-shadow: 0 0 5px plum;
+            background: white;
+            color: plum;
+            transform: scale(5) translate(30px,0px);
+        }
+        .button button:active {
+            background:mediumslateblue;
+            box-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
+            color: lightgrey;
+        }
+        header > ul{
+            display: flex;
+            justify-content: space-around;
+        }
+        .bar {
+            
+            width: 20px;
+            border: 3px solid darkgrey;
+            background-color:darkgrey;
+            border-radius: 2px;
+            margin: 3px;
+            display: none;
+            
+        }
+        @media (max-width: 420px) {
+            .bar {
+                display: block ;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            header > ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="mobile_tab">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul>
+            <li>HOME</li>
+            <li>FIRST</li>
+            <li>SECOND</li>
+            <li>THIRD</li>
+            <li>FORTH</li>
+        </ul>
+    </header>
+    <p>flex 예시</p>
+    <div class="flexBox">
+        <div class="box" style="background-color: palegreen;">Hello World</div>
+        <div class="box" style="background: palegoldenrod;">Hello World</div>
+        <div class="box" style="background: palevioletred;">Hello World</div>
+        <div class="box">Hello World</div>
+    </div>
+    <p>grid 예시</p>
+    <div class="gridBox">
+        <div class="box" style="background-color: palegreen">Hello World</div>
+        <div class="box" style="background: palegoldenrod;">Hello World</div>
+        <div class="box" style="background: palevioletred">Hello World</div>
+        <div class="box">Hello World</div>
+    </div>
+    <p>예쁜 버튼 만들기</p>
+
+    <div class="button">
+        <button>CLick Me</button>
+        <input type="button" value="Click Me">
+    </div>
+
+</body>
+</html>
